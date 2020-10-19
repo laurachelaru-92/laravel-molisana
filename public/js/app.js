@@ -19384,8 +19384,8 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\mgarg\Desktop\laravel-molisana\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\Users\mgarg\Desktop\laravel-molisana\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\Users\mgarg\Desktop\Laura-Progetti-Boolean\Settimana-17\laravel-molisana\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\Users\mgarg\Desktop\Laura-Progetti-Boolean\Settimana-17\laravel-molisana\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

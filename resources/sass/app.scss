@@ -1,4 +1,16 @@
-//
+@import "Partials/variables";
+@import "Partials/extensions";
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
+@import "Partials/header";
+@import "Partials/main";
+
+// Page settings
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-  background-color: red;
+  font-family: $mainFont;
 }

@@ -1,0 +1,47 @@
+header {
+
+  #logo {
+    text-align: center;
+
+    img {
+      width: 300px;
+      height: auto;
+      padding: 30px 0;
+    }
+  }
+
+  nav {
+    height: 80px;
+    line-height: 80px;
+    text-align: center;
+
+    ul {
+      @extend %listReset;
+      display: flex;
+      justify-content: center;
+
+      li {
+        height: 100%;
+
+        a {
+          @extend %linkReset;
+          display: inline-block;
+          height: 100%;
+          padding: 0 30px;
+          font-size: 25px;
+          font-weight: 600;
+          color: $blackText;
+          transition: background 0.4s ease;
+
+          &.selected {
+            background-color: $aquaColor;
+          }
+
+          &:hover {
+            background-color: $aquaColor;
+          }
+        }
+      }
+    }
+  }
+}

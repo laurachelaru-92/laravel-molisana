@@ -1,3 +1,4 @@
+<!-- Settings PHP/Blade -->
 @php
 
 $data = '[
@@ -126,6 +127,8 @@ $data = '[
 $data = json_decode($data, true);
 
 @endphp
+<!-- end settings PHP/Blade -->
+
 
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
@@ -135,24 +138,31 @@ $data = json_decode($data, true);
     <link rel="stylesheet" href="{{asset('css/app.css')}}">
   </head>
   <body>
+    <!-- Header -->
     <header>
+      <!-- Logo -->
       <div id="logo">
         <img src="{{asset('images/logo.png')}}" alt="logo molisana">
       </div>
+      <!-- / logo -->
+      <!-- Navigation bar -->
       <nav>
         <ul>
           <li><a href="#">Home</a></li>
-          <li><a href="#">Prodotti</a></li>
+          <li><a href="#" class="selected">Prodotti</a></li>
           <li><a href="#">News</a></li>
         </ul>
       </nav>
+      <!-- / navigation bar -->
     </header>
+    <!-- / header -->
+    <!-- Main content -->
     <main>
       <h3>Le Lunghe</h3>
       <ul>
         @foreach($data as $dato)
           @if($dato["tipo"] === "lunga")
-            <li>{{$dato["titolo"]}}</li>
+            <li><img src="{{$dato["src"]}}" alt="immagine pasta"></li>
           @endif
         @endforeach
       </ul>
@@ -160,7 +170,7 @@ $data = json_decode($data, true);
       <ul>
         @foreach($data as $dato)
           @if($dato["tipo"] === "corta")
-            <li>{{$dato["titolo"]}}</li>
+          <li><img src="{{$dato["src"]}}" alt="immagine pasta"></li>
           @endif
         @endforeach
       </ul>
@@ -168,11 +178,13 @@ $data = json_decode($data, true);
       <ul>
         @foreach($data as $dato)
           @if($dato["tipo"] === "cortissima")
-            <li>{{$dato["titolo"]}}</li>
+          <li><img src="{{$dato["src"]}}" alt="immagine pasta"></li>
           @endif
         @endforeach
       </ul>
     </main>
+    <!-- / main content -->
+    <!-- Footer -->
     <footer>
       <div id="left-foot">
         <img src="{{asset('images/logo.png')}}" alt="logo molisana">
@@ -184,6 +196,9 @@ $data = json_decode($data, true);
         </ul>
       </div>
     </footer>
+    <!-- / footer -->
+    <!-- Js-->
     <script src="{{asset('js/app.js')}}" type="text/javascript"></script>
+    <!-- / Js-->
   </body>
 </html>
