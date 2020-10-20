@@ -1,6 +1,6 @@
 @import url(https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;
 
-400;600;700&display=swap);main ul,
+400;600;700&display=swap);main .container ul,
 header nav ul {
   list-style: none;
 }
@@ -53,29 +53,60 @@ header nav ul li a:hover {
 }
 
 main {
+  background-image: url(/images/bg-main.jpg);
+  padding: 40px 0;
+}
+
+main .container {
   width: 70%;
   margin: auto;
 }
 
-main h3 {
+main .container h3 {
   text-transform: uppercase;
   font-size: 30px;
-  margin-top: 40px;
 }
 
-main ul {
+main .container h3:not(:first-of-type) {
+  padding-top: 40px;
+}
+
+main .container ul {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
 }
 
-main ul li {
-  width: calc(100% / 3);
-  padding: 10px 10px 0 0;
+main .container ul li {
+  width: calc((100% / 3) - 20px);
+  overflow: hidden;
+  font-size: 0;
+  margin: 10px 10px 0 0;
+  position: relative;
 }
 
-main ul img {
+main .container ul li img {
   width: 100%;
+  transition: transform 0.7s ease;
+}
+
+main .container ul li .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  transition: all 1s ease;
+}
+
+main .container ul li:hover img {
+  transform: scale(1.5);
+}
+
+main .container ul li:hover .overlay {
+  display: block;
 }
 
 * {
