@@ -38,7 +38,12 @@ foreach ($data as $key => $dato) {
     @foreach($lunga as $pasta_lunga)
       <li>
         <img src="{{$pasta_lunga["src"]}}" alt="immagine pasta">
-        <div class="overlay"></div>
+        <div class="overlay">
+          <div class="text">
+            <p>{{$pasta_lunga["titolo"]}}</p>
+            <img src="{{asset('images/icon.svg')}}" alt="">
+          </div>
+        </div>
       </li>
     @endforeach
   </ul>
@@ -47,7 +52,15 @@ foreach ($data as $key => $dato) {
   <h3>Le Corte</h3>
   <ul>
     @foreach($corta as $pasta_corta)
-      <li><img src="{{$pasta_corta["src"]}}" alt="immagine pasta"></li>
+      <li>
+        <img src="{{$pasta_corta["src"]}}" alt="immagine pasta">
+        <div class="overlay">
+          <div class="text">
+            <p>{{$pasta_lunga["titolo"]}}</p>
+            <img src="{{asset('images/icon.svg')}}" alt="">
+          </div>
+        </div>
+      </li>
     @endforeach
   </ul>
   @endif
@@ -55,7 +68,15 @@ foreach ($data as $key => $dato) {
   <h3>Le Cortissime</h3>
   <ul>
     @foreach($cortissima as $pasta_cortissima)
-      <li><img src="{{$pasta_cortissima["src"]}}" alt="immagine pasta"></li>
+      <li>
+        <img src="{{$pasta_cortissima["src"]}}" alt="immagine pasta">
+        <div class="overlay">
+          <div class="text">
+            <p>{{$pasta_lunga["titolo"]}}</p>
+            <img src="{{asset('images/icon.svg')}}" alt="">
+          </div>
+        </div>
+      </li>
     @endforeach
   </ul>
   @endif
