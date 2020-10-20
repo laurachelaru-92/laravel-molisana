@@ -118,7 +118,7 @@ main ul li .overlay .text img {
 }
 
 main ul li:hover > img {
-  transform: scale(1.5);
+  transform: scale(1.3);
 }
 
 main ul li:hover .overlay {
@@ -187,7 +187,7 @@ body {
 }
 
 .container {
-  width: 70%;
+  width: 80%;
   margin: auto;
 }
 

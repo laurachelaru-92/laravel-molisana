@@ -1,7 +1,7 @@
 <header>
     <!-- Logo -->
     <div id="logo">
-        <img src="{{asset('images/logo.png')}}" alt="logo molisana">
+        <img src="{{asset("images/logo.png")}}" alt="logo molisana">
     </div>
     <!-- / logo -->
     <!-- Navigation bar -->
