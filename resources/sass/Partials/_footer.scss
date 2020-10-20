@@ -7,6 +7,7 @@ footer {
 
     #left-foot {
         float: left;
+        width: 35%;
 
         p {
             font-size: 20px;
@@ -15,6 +16,33 @@ footer {
 
     #right-foot {
         float: right;
+        width: 65%;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding-left: 40px;
+
+        ul {
+            @extend %listReset;
+            padding-bottom: 30px;
+
+            h3 {
+                text-transform: uppercase;
+                font-size: 30px;
+                padding-bottom: 20px;
+            }
+
+            li {
+                padding-bottom: 10px;
+
+
+                a {
+                    @extend %linkReset;
+                    color: $greyText;
+                    font-size: 20px;
+                }
+            }
+        }
     }
 
     &::after {

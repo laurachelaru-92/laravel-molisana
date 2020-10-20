@@ -1,10 +1,12 @@
 @import url(https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;
 
-400;600;700&display=swap);main ul,
+400;600;700&display=swap);footer #right-foot ul,
+main ul,
 header nav ul {
   list-style: none;
 }
 
+footer #right-foot ul li a,
 main ul li .overlay .text,
 header nav ul li a {
   text-decoration: none;
@@ -133,6 +135,7 @@ footer {
 
 footer #left-foot {
   float: left;
+  width: 35%;
 }
 
 footer #left-foot p {
@@ -141,6 +144,30 @@ footer #left-foot p {
 
 footer #right-foot {
   float: right;
+  width: 65%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-left: 40px;
+}
+
+footer #right-foot ul {
+  padding-bottom: 30px;
+}
+
+footer #right-foot ul h3 {
+  text-transform: uppercase;
+  font-size: 30px;
+  padding-bottom: 20px;
+}
+
+footer #right-foot ul li {
+  padding-bottom: 10px;
+}
+
+footer #right-foot ul li a {
+  color: #848D9B;
+  font-size: 20px;
 }
 
 footer::after {
