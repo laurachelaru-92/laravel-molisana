@@ -1,0 +1,25 @@
+footer {
+    color: $greyText;
+    padding: 60px 0 150px 0;
+    background-image: url("/images/mountains.jpg");
+    background-repeat: no-repeat;
+    background-position: center bottom;
+
+    #left-foot {
+        float: left;
+
+        p {
+            font-size: 20px;
+        }
+    }
+
+    #right-foot {
+        float: right;
+    }
+
+    &::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+}

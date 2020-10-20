@@ -1,10 +1,11 @@
 @import url(https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;
 
-400;600;700&display=swap);main .container ul,
+400;600;700&display=swap);main ul,
 header nav ul {
   list-style: none;
 }
 
+main ul li .overlay .text,
 header nav ul li a {
   text-decoration: none;
 }
@@ -57,27 +58,22 @@ main {
   padding: 40px 0;
 }
 
-main .container {
-  width: 70%;
-  margin: auto;
-}
-
-main .container h3 {
+main h3 {
   text-transform: uppercase;
   font-size: 30px;
 }
 
-main .container h3:not(:first-of-type) {
+main h3:not(:first-of-type) {
   padding-top: 40px;
 }
 
-main .container ul {
+main ul {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
 }
 
-main .container ul li {
+main ul li {
   width: calc((100% / 3) - 10px);
   overflow: hidden;
   font-size: 0;
@@ -85,12 +81,12 @@ main .container ul li {
   position: relative;
 }
 
-main .container ul li > img {
+main ul li > img {
   width: 100%;
   transition: transform 0.7s ease;
 }
 
-main .container ul li .overlay {
+main ul li .overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -99,15 +95,13 @@ main .container ul li .overlay {
   background-color: rgba(0, 0, 0, 0.5);
   opacity: 0;
   transition: opacity 1s ease;
-  z-index: 1;
 }
 
-main .container ul li .overlay .text {
+main ul li .overlay .text {
   color: #fff;
   position: absolute;
   top: 50%;
   left: 50%;
-  z-index: 2;
   transform: translate(-50%, -50%);
   font-size: 20px;
   font-weight: 300;
@@ -115,18 +109,44 @@ main .container ul li .overlay .text {
   text-align: center;
 }
 
-main .container ul li .overlay .text img {
+main ul li .overlay .text img {
   width: 30px;
   margin-top: 10px;
   opacity: 0.8;
 }
 
-main .container ul li:hover > img {
+main ul li:hover > img {
   transform: scale(1.5);
 }
 
-main .container ul li:hover .overlay {
+main ul li:hover .overlay {
   opacity: 1;
+}
+
+footer {
+  color: #848D9B;
+  padding: 60px 0 150px 0;
+  background-image: url("/images/mountains.jpg");
+  background-repeat: no-repeat;
+  background-position: center bottom;
+}
+
+footer #left-foot {
+  float: left;
+}
+
+footer #left-foot p {
+  font-size: 20px;
+}
+
+footer #right-foot {
+  float: right;
+}
+
+footer::after {
+  content: "";
+  clear: both;
+  display: table;
 }
 
 * {
@@ -137,5 +157,10 @@ main .container ul li:hover .overlay {
 
 body {
   font-family: "Open Sans", sans-serif;
+}
+
+.container {
+  width: 70%;
+  margin: auto;
 }
 

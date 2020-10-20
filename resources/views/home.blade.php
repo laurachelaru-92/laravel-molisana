@@ -36,15 +36,15 @@ foreach ($data as $key => $dato) {
   <h3>Le Lunghe</h3>
   <ul>
     @foreach($lunga as $pasta_lunga)
-      <li>
-        <img src="{{$pasta_lunga["src"]}}" alt="immagine pasta">
-        <div class="overlay">
-          <div class="text">
-            <p>{{$pasta_lunga["titolo"]}}</p>
-            <img src="{{asset('images/icon.svg')}}" alt="">
-          </div>
-        </div>
-      </li>
+    <li>
+      <img src="{{$pasta_lunga["src"]}}" alt="immagine pasta">
+      <div class="overlay">
+        <a href="prodotto/{{$pasta_lunga["id"]}}" class="text">
+          <p>{{$pasta_lunga["titolo"]}}</p>
+          <img src="{{asset('images/icon.svg')}}" alt="">
+        </a>
+      </div>
+    </li>
     @endforeach
   </ul>
   @endif
@@ -55,10 +55,10 @@ foreach ($data as $key => $dato) {
       <li>
         <img src="{{$pasta_corta["src"]}}" alt="immagine pasta">
         <div class="overlay">
-          <div class="text">
+          <a href="prodotto/{{$pasta_lunga["id"]}}" class="text">
             <p>{{$pasta_lunga["titolo"]}}</p>
             <img src="{{asset('images/icon.svg')}}" alt="">
-          </div>
+          </a>
         </div>
       </li>
     @endforeach
@@ -71,10 +71,10 @@ foreach ($data as $key => $dato) {
       <li>
         <img src="{{$pasta_cortissima["src"]}}" alt="immagine pasta">
         <div class="overlay">
-          <div class="text">
+          <a href="prodotto/{{$pasta_lunga["id"]}}" class="text">
             <p>{{$pasta_lunga["titolo"]}}</p>
             <img src="{{asset('images/icon.svg')}}" alt="">
-          </div>
+          </a>
         </div>
       </li>
     @endforeach

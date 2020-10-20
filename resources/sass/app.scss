@@ -3,6 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
 @import "Partials/header";
 @import "Partials/main";
+@import "Partials/footer";
 
 // Page settings
 * {
@@ -13,4 +14,9 @@
 
 body {
   font-family: $mainFont;
+}
+
+.container {
+  width: $containerWidth;
+  margin: auto;
 }
