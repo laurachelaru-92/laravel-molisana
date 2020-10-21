@@ -125,6 +125,16 @@ main ul li:hover .overlay {
   opacity: 1;
 }
 
+#product h1 {
+  text-align: center;
+  padding: 10px 0 80px 0;
+}
+
+#product img {
+  display: block;
+  width: 100%;
+}
+
 footer {
   color: #848D9B;
   padding: 60px 0 150px 0;
@@ -184,6 +194,11 @@ footer::after {
 
 body {
   font-family: "Open Sans", sans-serif;
+}
+
+main.no-bg {
+  background-image: none;
+  background-color: #B8DAE6;
 }
 
 .container {

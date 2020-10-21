@@ -3,6 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
 @import "Partials/header";
 @import "Partials/main";
+@import "Partials/product";
 @import "Partials/footer";
 
 // Page settings
@@ -14,6 +15,11 @@
 
 body {
   font-family: $mainFont;
+}
+
+main.no-bg {
+  background-image: none;
+  background-color: #B8DAE6;
 }
 
 .container {

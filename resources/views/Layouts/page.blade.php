@@ -10,11 +10,7 @@
     @include('Page_bits.header')
     <!-- / header -->
     <!-- Main content -->
-    <main>
-      <div class="container">
-        @yield('main_content')
-      </div>
-    </main>
+    @yield('main_content')
     <!-- / main content -->
     <!-- Footer -->
     <footer>

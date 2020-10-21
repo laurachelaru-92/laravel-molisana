@@ -13,13 +13,41 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
 Route::get('/', function () {
     return view('home');
 })->name("home");
 
 Route::get('/prodotti', function () {
-    return view('Partial_pages.prodotti');
+    $data = config('pasta');
+    
+    $pasta = [];
+
+    foreach ($data as $key => $prodotto) {
+        // Aggiungiamo una chiave "id" con l'indice "$key" come valore
+        $prodotto["id"] = $key;
+        // Aggiungiamo in ogni prodotto una chiave "categoria"
+        if($prodotto["tipo"] == "lunga") {
+            $prodotto["categoria"] = "Le Lunghe";
+        } elseif($prodotto["tipo"] == "corta") {
+            $prodotto["categoria"] = "Le Corte";
+        } elseif($prodotto["tipo"] == "cortissima") {
+            $prodotto["categoria"] = "Le Cortissime";
+        }
+        // Pushiamo il prodotto con le chiavi nuove nel nuovo array $pasta
+        $pasta[$prodotto["tipo"]][] = $prodotto;
+    }
+
+    return view('Partial_pages.prodotti', ["pasta" => $pasta]);
 })->name("prodotti");
+
+Route::get('/prodotto/show/{id}', function ($id) {
+    $data = config("pasta.$id");
+    if($data == null) {
+        abort(404);
+    } 
+    return view('Partial_pages.prodotto_singolo', ["pasta" => $data, "id" => $id]);
+})->name("show");
 
 Route::get('/news', function () {
     return view('Partial_pages.news');

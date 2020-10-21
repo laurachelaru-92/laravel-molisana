@@ -32,53 +32,56 @@ foreach ($data as $key => $dato) {
 @endsection
 
 @section('main_content')
-  @if (!empty($lunga))
-  <h3>Le Lunghe</h3>
-  <ul>
-    @foreach($lunga as $pasta_lunga)
-    <li>
-      <img src="{{$pasta_lunga["src"]}}" alt="immagine pasta">
-      <div class="overlay">
-        <a href="prodotto/{{$pasta_lunga["id"]}}" class="text">
-          <p>{{$pasta_lunga["titolo"]}}</p>
-          <img src="{{asset('images/icon.svg')}}" alt="">
-        </a>
-      </div>
-    </li>
-    @endforeach
-  </ul>
-  @endif
-  @if (!empty($corta))
-  <h3>Le Corte</h3>
-  <ul>
-    @foreach($corta as $pasta_corta)
+<main>
+  <div class="container">
+    @if (!empty($lunga))
+    <h3>Le Lunghe</h3>
+    <ul>
+      @foreach($lunga as $pasta_lunga)
       <li>
-        <img src="{{$pasta_corta["src"]}}" alt="immagine pasta">
+        <img src="{{$pasta_lunga["src"]}}" alt="immagine pasta">
         <div class="overlay">
-          <a href="prodotto/{{$pasta_corta["id"]}}" class="text">
-            <p>{{$pasta_corta["titolo"]}}</p>
+          <a href="prodotto/{{$pasta_lunga["id"]}}" class="text">
+            <p>{{$pasta_lunga["titolo"]}}</p>
             <img src="{{asset('images/icon.svg')}}" alt="">
           </a>
         </div>
       </li>
-    @endforeach
-  </ul>
-  @endif
-  @if (!empty($cortissima))
-  <h3>Le Cortissime</h3>
-  <ul>
-    @foreach($cortissima as $pasta_cortissima)
-      <li>
-        <img src="{{$pasta_cortissima["src"]}}" alt="immagine pasta">
-        <div class="overlay">
-          <a href="prodotto/{{$pasta_cortissima["id"]}}" class="text">
-            <p>{{$pasta_cortissima["titolo"]}}</p>
-            <img src="{{asset('images/icon.svg')}}" alt="">
-          </a>
-        </div>
-      </li>
-    @endforeach
-  </ul>
-  @endif
-
+      @endforeach
+    </ul>
+    @endif
+    @if (!empty($corta))
+    <h3>Le Corte</h3>
+    <ul>
+      @foreach($corta as $pasta_corta)
+        <li>
+          <img src="{{$pasta_corta["src"]}}" alt="immagine pasta">
+          <div class="overlay">
+            <a href="prodotto/{{$pasta_corta["id"]}}" class="text">
+              <p>{{$pasta_corta["titolo"]}}</p>
+              <img src="{{asset('images/icon.svg')}}" alt="">
+            </a>
+          </div>
+        </li>
+      @endforeach
+    </ul>
+    @endif
+    @if (!empty($cortissima))
+    <h3>Le Cortissime</h3>
+    <ul>
+      @foreach($cortissima as $pasta_cortissima)
+        <li>
+          <img src="{{$pasta_cortissima["src"]}}" alt="immagine pasta">
+          <div class="overlay">
+            <a href="prodotto/{{$pasta_cortissima["id"]}}" class="text">
+              <p>{{$pasta_cortissima["titolo"]}}</p>
+              <img src="{{asset('images/icon.svg')}}" alt="">
+            </a>
+          </div>
+        </li>
+      @endforeach
+    </ul>
+    @endif
+  </div>
+</main>
 @endsection
