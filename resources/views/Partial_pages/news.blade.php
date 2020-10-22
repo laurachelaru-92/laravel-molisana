@@ -5,5 +5,9 @@
 @endsection
 
 @section('main_content')
-    <h1>Le ultime news</h1>
+<main>
+    <div class="container">
+        <h1>Nessuna news</h1>
+    </div>
+</main>
 @endsection
