@@ -1,5 +1,3 @@
-{{-- @dd($pasta); --}}
-
 @extends('Layouts.page')
 
 @section('title')
@@ -8,7 +6,7 @@
 
 @section('main_content')
     <main>
-        <div>
+        <div class="container">
             @foreach ($pasta as $key => $prodotto)
                 @if (!empty($key))
                     <h3>{{$prodotto[0]["categoria"]}}</h3>
@@ -17,7 +15,7 @@
                             <li>
                                 <img src="{{$item["src"]}}" alt="immagine pasta">
                                 <div class="overlay">
-                                    <a href="{{route('show'.$item["id"])}}" class="text">
+                                    <a href="{{route('prodotto', $item["id"])}}" class="text">
                                         <p>{{$item["titolo"]}}</p>
                                         <img src="{{asset('images/icon.svg')}}" alt="">
                                     </a>

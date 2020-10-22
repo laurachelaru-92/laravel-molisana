@@ -42,12 +42,13 @@ Route::get('/prodotti', function () {
 })->name("prodotti");
 
 Route::get('/prodotto/show/{id}', function ($id) {
-    $data = config("pasta.$id");
-    if($data == null) {
+    $data = config("pasta");
+    if($data[$id] == null) {
         abort(404);
-    } 
-    return view('Partial_pages.prodotto_singolo', ["pasta" => $data, "id" => $id]);
-})->name("show");
+    }
+    $length = count($data);
+    return view('Partial_pages.prodotto_singolo', ["pasta" => $data[$id], "id" => $id, "length" => $length]);
+})->name("prodotto");
 
 Route::get('/news', function () {
     return view('Partial_pages.news');
