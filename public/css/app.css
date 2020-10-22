@@ -6303,10 +6303,13 @@ main .arrow:hover {
   width: 100%;
 }
 
-#product p,
-#product ol,
-#product ul {
+#product div.text {
   font-size: 30px;
+}
+
+#product div.text ol {
+  margin-left: 80px;
+  text-indent: 20px;
 }
 
 footer {

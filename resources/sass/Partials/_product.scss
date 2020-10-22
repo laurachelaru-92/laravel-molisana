@@ -10,7 +10,12 @@
         width: 100%;
     }
 
-    p, ol, ul {
+    div.text {
         font-size: 30px;
+
+        ol {
+            margin-left: 80px;
+            text-indent: 20px;
+        }
     }
 }
